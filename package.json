@@ -1,0 +1,24 @@
+{
+  "name": "pubsub-message-wall",
+  "version": "0.1.0",
+  "description": "XMPP PubSub powered realtime message wall",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lloydwatkin/pubsub-message-wall.git"
+  },
+  "author": "Lloyd Watkin <lloyd@evilprofessor.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lloydwatkin/pubsub-message-wall/issues"
+  },
+  "dependencies": {
+    "grunt-cli": "~0.1.9",
+    "express": "~3.3.8",
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "~0.4.1"
+  }
+}

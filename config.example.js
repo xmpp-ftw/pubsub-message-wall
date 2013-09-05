@@ -1,6 +1,6 @@
 var config = {
 
-    host: 'xmpp-ftw.jit.su',
+    host: 'https://xmpp-ftw.jit.su',
     
     connect: {
         jid: "test@example.com",

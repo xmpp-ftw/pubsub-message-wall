@@ -20,10 +20,22 @@ body {
 }
 
 #content { 
-  width: 800px;
+  width: 960px;
   background-color: #333333;
   margin-top: 10px;
   height: auto !important;
+}
+
+#content p.message {
+    padding: 15px;
+    font-size: 2.0em;
+    width: 930px%;
+    display: block;
+    margin: 15px 0 15px 0;
+    background-color: #ffbb00;
+    border-top: 5px solid #333;
+    border-bottom: 5px solid #333;  
+    text-align: center;
 }
 
 #footer { 

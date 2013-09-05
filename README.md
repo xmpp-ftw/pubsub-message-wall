@@ -11,7 +11,7 @@ A message wall powered by XMPP pubsub (demo)
 * Listens for posts to a node
 * Drops data into UI
 
-Note: Only hanles the most basic of pubsub items for demo
+Note: Only handles the most basic of pubsub items for demo
 
 ## Instructions
 

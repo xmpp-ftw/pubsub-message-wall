@@ -18,8 +18,8 @@ Note: Only handles the most basic of pubsub items for demo
 * Copy config.example.js to config.js
 * Edit to suit
 * `npm i .`
-* Grunt
-* http://localhost:3000
+* grunt connect
+* http://localhost:4000
 
 ## Licence 
 

@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function() { 
     
     var script = config.host + '/scripts/primus.js'
     
     jQuery.getScript(script, function() {
           init()
-      }) 
+    }) 
 })
 
 var addMessage = function(data) {
@@ -47,28 +47,37 @@ var init = function() {
            status: 'https://github.com/lloydwatkin/pubsub-message-wall.git',
            priority: 10
         })
-        // Subscribe to a node
-        var subscribeNode = { 
-          to: config.server,
-          node: config.node
-        }
-        console.log('subscribeNode', subscribeNode)
-        socket.emit(
-            'xmpp.pubsub.subscribe', subscribeNode, function(error, success) {
-                if (error) return console.error('Error subscribing to node', error)
-                console.log('Node created')
+        var subscribeAndPost = function() {
+            // Subscribe to a node
+            var subscribeNode = { 
+              to: config.server,
+              node: config.node
             }
-        )
-        // Publish a test item
-        var publishItem = {
-            to: config.server,
-            node: config.node,
-            content: 'Hello world!',
+            console.log('subscribeNode', subscribeNode)
+            socket.emit(
+                'xmpp.pubsub.subscribe', subscribeNode, function(error, success) {
+                    if (error) return console.error('Error subscribing to node', error)
+                    console.log('Node created')
+                }
+            )
+            // Publish a test item
+            var publishItem = {
+                to: config.server,
+                node: config.node,
+                content: 'Hello world!',
+            }
+            socket.emit('xmpp.pubsub.publish', publishItem, function(error, data) {
+                if (error) return console.error('Failed to publish to node', error)
+                console.log('Published to node', data)
+            })
         }
-        socket.emit('xmpp.pubsub.publish', publishItem, function(error, data) {
-            if (error) return console.error('Failed to publish to node', error)
-            console.log('Published to node', data)
-            addMessage('Hello World!')
+        var node = {
+            to: config.server,
+            node: config.node
+        }
+        socket.emit('xmpp.pubsub.create', node, function(error, success) {
+            console.log('Node create', error, success)
+            subscribeAndPost()
         })
     })
     socket.emit('xmpp.login', config.connect)

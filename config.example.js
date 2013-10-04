@@ -11,6 +11,8 @@ var config = {
     
     server: "pubsub.example.com",
     
-    node: "message-wall-updates"
+    node: "message-wall-updates",
+
+    welcomeMessage: 'Hello world!'
 
 }

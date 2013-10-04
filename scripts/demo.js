@@ -64,7 +64,7 @@ var init = function() {
             var publishItem = {
                 to: config.server,
                 node: config.node,
-                content: 'Hello world!',
+                content: config.welcomeMessage || 'Hello world!',
             }
             socket.emit('xmpp.pubsub.publish', publishItem, function(error, data) {
                 if (error) return console.error('Failed to publish to node', error)

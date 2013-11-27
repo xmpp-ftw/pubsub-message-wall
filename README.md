@@ -24,3 +24,7 @@ Note: Only handles the most basic of pubsub items for demo
 ## Licence 
 
 MIT.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/xmpp-ftw/pubsub-message-wall/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

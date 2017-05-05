@@ -1,6 +1,8 @@
 pubsub-message-wall
 ===================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/xmpp-ftw/pubsub-message-wall.svg)](https://greenkeeper.io/)
+
 A message wall powered by XMPP pubsub (demo)
 
 ## What does it do?

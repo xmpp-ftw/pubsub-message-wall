@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "grunt-cli": "~0.1.9",
-    "express": "~3.3.8",
+    "express": "~3.11.0",
     "grunt": "~0.4.1",
     "grunt-contrib-connect": "~0.4.1"
   }
